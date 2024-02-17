@@ -1,0 +1,295 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(19, 3, 50);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    padding-left: 40px;
+    backdrop-filter: blur(7px);
+    font-size: 18px;
+}
+
+header h1 {
+    margin: 0;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-right: 80px;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e6e3e3;
+    color: black;
+    border-radius: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #888888;
+}
+
+main {
+    padding: 20px;
+    background-color: transparent;
+}
+
+#about p {
+    margin-bottom: 10px;
+}
+
+.education-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.education-section li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.education-section .degree {
+    font-weight: bold;
+}
+
+.education-section .university {
+    font-style: italic;
+}
+
+#skills div {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#experienceList li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#projectsList li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#organizationsList li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#contact p {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/*******************************************************************************/
+/* Separation Style below */
+
+/* Add margin and padding to create spacing between sections */
+section {
+    margin-bottom: 40px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 40px;
+}
+
+/* Apply background colors to each section */
+.about-section {
+    background-color: lightblue;
+    margin-top: 20px;
+}
+
+.about-section p {
+    font-size: 20px;
+}
+
+.gitHubContributions-section {
+    background-color: lightgray;
+}
+
+.education-section {
+    background-color: lightblue;
+}
+
+.skills-section {
+    background-color: lightgray;
+}
+
+.experience-section {
+    background-color: lightblue;
+}
+
+.projects-section {
+    background-color: lightgray;
+}
+
+.organizations-section {
+    background-color: lightblue;
+}
+
+.contact-section {
+    background-color: lightgray;
+}
+
+.certification-section {
+    background-color: lightblue;
+}
+
+/* Style the dividers between sections */
+hr.divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 40px 0;
+}
+
+/* Additional styling for section headings */
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+/* Modern and colorful section styling */
+.about-section,
+.gitHubContributions-section,
+.education-section,
+.skills-section,
+.experience-section,
+.projects-section,
+.organizations-section,
+.contact-section,
+.certification-section {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    color: #333;
+}
+
+/* Gif Api styling */
+#heroContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#heroBackground {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#introContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 70px;
+    text-align: center;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    /* Set the text shadow */
+    /* Add additional styling as needed */
+}
+
+.scroll-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s, transform 1s;
+}
+
+.scroll-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Git Hub Contribution Chart Styling */
+#contributions-chart {
+    display: grid;
+    grid-template-columns: repeat(12, 25px);
+    /* Adjust the calculation to include spacing */
+    grid-template-rows: repeat(7, 25px);
+    /* Adjust the calculation to include spacing */
+    grid-gap: 5px;
+    /* Adjust the gap as desired */
+    width: 100%;
+    /* Adjust the width as desired */
+    max-width: 350px;
+    /* Set a maximum width if needed */
+    padding: 10px;
+    justify-content: center;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 5%;
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    background-color: #ebedf0;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 25%;
+}
+
+.cell.high {
+    background-color: #7bc96f;
+}
+
+.cell.medium {
+    background-color: #239a3b;
+}
+
+.cell.low {
+    background-color: #196127;
+}
+
+.tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 1;
+}
