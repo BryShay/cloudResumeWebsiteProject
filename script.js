@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to trigger the resume download
     function downloadResume() {
       // Replace the URL with the path to your resume file
-      const resumeUrl = ;
+      //const resumeUrl = ;
     
       // Create a temporary link element
       const link = document.createElement('a');

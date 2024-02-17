@@ -224,8 +224,15 @@ h3 {
     font-size: 70px;
     text-align: center;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    
     /* Set the text shadow */
     /* Add additional styling as needed */
+}
+
+#introText {
+    background-color: #000;
+    border-radius: 8px;
+    border: 3px solid; 
 }
 
 .scroll-section {
