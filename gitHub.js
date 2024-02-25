@@ -21,7 +21,7 @@ const query = `
   }
 `;
 
-const accessToken = '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'; // Replace with your personal access token
+const accessToken = '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'; // Replace with your personal access token
 
 fetch(apiUrl, {
   method: 'POST',
