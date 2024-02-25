@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # cloudResumeWebsiteProject
 repo for my cloud resume project hosted on AWS
 
@@ -37,3 +38,7 @@ This project is licensed under the MIT License.
 
 Contact
 For any inquiries or feedback, feel free to reach out to me at your.email@example.com.
+=======
+# CloudResumeWebsite
+This is a project I am working on to convert my resume to website form.
+>>>>>>> 16bbbd0 (Initial commit)
