@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Separator</title>
+</head>
+<body>
+    <textarea id="textInput" rows="10" cols="50"></textarea><br>
+    <button onclick="separateLines()">Separate Lines</button>
+    <div id="output"></div>
+
+    <script>
+        function separateLines() {
+            var text = document.getElementById('textInput').value;
+            var separator = prompt("Enter the character to separate lines (e.g., ',', ';', etc.):");
+
+            if (separator !== null && separator !== '') {
+                var lines = text.split(separator);
+                var formattedText = lines.join("<br>");
+
+                document.getElementById('output').innerHTML = formattedText;
+            } else {
+                alert("Please enter a valid separator character.");
+            }
+        }
+    </script>
+</body>
+</html>
