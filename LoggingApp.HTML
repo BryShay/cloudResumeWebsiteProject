@@ -4,11 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Line Separator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: darkslategray;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+            text-align: center; 
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 2px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #output {
+            margin-top: 20px;
+        }
+
+        #separator-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 10px;
+            
+        }
+
+        select {
+            width: 100%;
+            align-self: left; 
+        }
+
+        #button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+    </style>
 </head>
 <body>
-    <textarea id="textInput" rows="10" cols="50"></textarea><br>
-    <button onclick="separateLines()">Separate Lines</button>
-    <div id="output"></div>
+    <h1>Application Logging Reader</h1>
+    <div id="container">
+        <textarea id="textInput" rows="10" cols="50" placeholder="Enter text here..."></textarea>
+        <label for="separator">Select separator:</label>
+        <div id="separator-container">
+            <select id="separator">
+                <option value=",">Comma (,)</option>
+                <option value=";">Semicolon (;)</option>
+                <option value=" ">Space</option>
+                <option value="|">Pipe (|)</option>
+            </select>
+        </div>
+        <div id="button-container">
+            <button onclick="separateLines()">Separate Lines</button>
+            <button onclick="clearTextArea()">Clear Text</button>
+        </div>
+        <div id="output"></div>
+    </div>
 
     <script>
         function separateLines() {
@@ -24,6 +111,12 @@
                 alert("Please enter a valid separator character.");
             }
         }
+
+        function clearTextArea() {
+            document.getElementById('textInput').value = ''; 
+            document.getElementById('output').innerHTML = ''; 
+        }
     </script>
 </body>
 </html>
+
