@@ -21,7 +21,7 @@ const query = `
   }
 `;
 
-const accessToken = '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'; // Replace with your personal access token
+const accessToken = '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'; // Replace with your personal access token
 
 fetch(apiUrl, {
   method: 'POST',
