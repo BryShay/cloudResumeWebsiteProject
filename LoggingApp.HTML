@@ -52,14 +52,44 @@
         #output {
             margin-top: 20px;
         }
+
+        #separator-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 10px;
+            
+        }
+
+        select {
+            width: 100%;
+            align-self: left; 
+        }
+
+        #button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
     <h1>Application Logging Reader</h1>
     <div id="container">
         <textarea id="textInput" rows="10" cols="50" placeholder="Enter text here..."></textarea>
-        <button onclick="separateLines()">Separate Lines</button>
-        <button onclick="clearTextArea()">Clear Text</button>
+        <label for="separator">Select separator:</label>
+        <div id="separator-container">
+            <select id="separator">
+                <option value=",">Comma (,)</option>
+                <option value=";">Semicolon (;)</option>
+                <option value=" ">Space</option>
+                <option value="|">Pipe (|)</option>
+            </select>
+        </div>
+        <div id="button-container">
+            <button onclick="separateLines()">Separate Lines</button>
+            <button onclick="clearTextArea()">Clear Text</button>
+        </div>
         <div id="output"></div>
     </div>
 
